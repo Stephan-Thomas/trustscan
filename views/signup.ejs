@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Form Example</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/build/css/style.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 h-100 w-100">
+    <main class="h-full w-full">
+      <header
+        class="w-full h-[100px] bg-[#265b20] px-[20px] flex items-center justify-between z-10"
+      >
+        <!-- logo -->
+        <div
+          class="logo h-[60px] w-[60px] rounded-[5px] grid place-content-center bg-white"
+        >
+          <img
+            class="h-[60px] w-[60px]"
+            src="https://img.icons8.com/color/48/detective.png"
+            alt="detective"
+          />
+        </div>
+      
+          <a
+            href="#"
+            class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
+            >Home</a
+          >
+         
+         
+       
+      </header>
+      <!-- <div
+        class="role-option w-full h-full flex flex-col items-center justify-center bg-white"
+      >
+        <h2 class="text-[2rem] font-[600] mt-[50px] mb-[20px] text-[#265b20]">
+          Sign Up as:
+        </h2>
+        <!-- admin button -->
+        <!-- <button
+          class="admin-btn w-[200px] h-[80px] bg-[#265b20] text-white hover:brightness-110 text-[1.2rem] font-[600] text-center rounded-[15px] mt-[30px] mb-[20px] shadow-lg"
+        >
+          Admin
+        </button> --> 
+        <!-- supplier-button -->
+        <!-- <button
+          class="supplier-btn w-[200px] h-[80px] bg-[#265b20] text-white hover:brightness-110 text-[1.2rem] font-[600] text-center rounded-[15px] mt-[20px] mb-[20px] shadow-lg"
+        >
+          Supplier
+        </button> -->
+      <!-- </div> -->
+      <div class="supplier-signup w-full h-full flex gap-[20px] mt-[30px]">
+        <div
+          class="h-[70%] w-[40%] bg-[#265b20] px-[30px] flex-col items-center"
+        >
+          <h2 class="text-[2rem] font-[600] mt-[50px] mb-[20px] text-white">
+            Join the Movement Against Counterfeit Products
+          </h2>
+          <p class="text-white mb-[20px]">
+            Sign up to help build a world where consumers can trust the products
+            they buy. Create an account today and be part of a transparent,
+            secure and trustworthy ecosystem. Together, let's rid out fake
+            products out of the market
+          </p>
+          <img
+            class="h-[150px] w-[150px] rounded-full mt-[30px]"
+            src="/build/img/sign.jpg"
+            alt=""
+          />
+          
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-8 w-[50%]">
+          <h2 class="text-2xl font-bold mb-6">Sign Up</h2>
+          <form id="signup-form">
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="first-name"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="John Doe"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="email"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="johndoe@example.com"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="********"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="confirm-password"
+              >
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="********"
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <button
+                type="button"
+                onclick="validateForm()"
+                class="bg-[#5ac44a] hover:brightness-90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <div
+            id="error-message"
+            class="mt-4 text-red-500 hidden"
+          ></div>
+        </div>
+      </div>
+      <!-- admin sign up -->
+      <!-- <div class="admin-signup w-[80%] hidden flex-col">
+        <h2 class="text-[2rem] font-[700] mb-[20px] ml-[45px]">
+          Sign Up as an Administrator
+        </h2>
+        <div class="w-full h-[300px] flex items-center justify-center">
+          <form
+            name="form"
+            onsubmit="return validateForm()"
+            class="form h-full w-[90%] bg-white py-[20px] relative flex gap-[30px]"
+          > -->
+            <!-- first part -->
+            <!-- <div class="first-form h-full w-[45%]">
+              <!-- name -->
+              <!-- <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Full Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  placeholder="Jane Doe"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div> --> 
+              <!-- email -->
+              <!-- <div class="email h-[75px] mb-[15px] w-full">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  placeholder="JaneDoe@gmail.com"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+            </div> -->
+            <!-- second part -->
+            <!-- <div class="first-form h-full w-[45%]"> -->
+              <!-- name -->
+              <!-- <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Full Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  placeholder="Jane Doe"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div> -->
+              <!-- email -->
+              <!-- <div class="email h-[75px] mb-[15px] w-full">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  placeholder="JaneDoe@gmail.com"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+            </div> -->
+            <!-- message -->
+            <!-- <div
+              class="w-[60%] absolute bottom-[70px] flex gap-[15px] items-center"
+            >
+              <input
+                type="checkbox"
+                required
+              />
+              <p>I agree to all the terms and conditions</p>
+            </div>
+            <button
+              type="submit"
+              class="submit-btn text-white bg-[#5ac44a] h-[50px] w-[150px] font-semibold hover:brightness-90 absolute bottom-[10px] left-0"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div> -->
+    </main>
+    <script src="/build/css/script.js"></script>
+  </body>
+</html>

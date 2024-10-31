@@ -27,11 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 // })
 
 app.get("/", function(req, res){
-
+res.render("index")
 })
 
 app.get("/addNew", function(req, res){
-  res.render("index")
+  res.render("addNew")
 })
 
 

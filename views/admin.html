@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Admin Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/build/css/style.css"
+    />
+  </head>
+  <body>
+    <main class="flex">
+      <!-- <aside class="h-full w-[20%] flex px-[10px] flex-col items-center py-[20px] shadow-xl">
+        <!-- image -->
+      <!-- <div class="profile-img rounded-full h-[60px] w-[60px] bg-[#5ac44a]"></div> -->
+      <!-- name -->
+       <!-- <p class="font-[600] text-[1.3rem] my-[5px]">Admin Name</p>
+       <p class=" ">Active</p>
+        <button
+           
+              class="text-white bg-[#5ac44a] h-[50px] w-full font-semibold hover:brightness-90 mt-[40px] rounded-[10px]"
+            >
+              Activate Products
+            </button>
+            <div class="lists w-full h-[200px] mt-[20px]">
+              <a href="" class="no-underline w-full h-1/4 hover:bg-gray-100 flex justify-start p-[5px] gap-[10px] rounded-[5px]">Overview</a>
+               <a href="" class="no-underline w-full h-1/4 hover:bg-gray-100 flex justify-start p-[5px] gap-[10px] rounded-[5px] shadow-xlrounded-[5px]"></a>
+                <a href="" class="no-underline w-full h-1/4 hover:bg-gray-100 flex justify-start p-[5px] gap-[10px] rounded-[5px]"></a>
+                 <a href="" class="no-underline w-full h-1/4 hover:bg-gray-100 flex justify-start p-[5px] gap-[10px] rounded-[5px]"></a>
+            </div>
+      </aside> --> 
+      <div class="body-container w-[80%] flex flex-col">
+        <h2 class=" text-[2rem] font-[700] mb-[20px] ml-[45px]">Sign p as an Administrator</h2>
+        <div class="w-full h-[300px] flex items-center justify-center">
+          <form
+            name="form"
+            onsubmit="return validateForm()"
+            class="form h-full w-[90%] bg-white py-[20px] relative flex gap-[30px]"
+          >
+            <!-- first part -->
+            <div class="first-form h-full w-[45%]">
+              <!-- name -->
+              <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Full Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  placeholder="Jane Doe"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+              <!-- email -->
+              <div class="email h-[75px] mb-[15px] w-full">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  placeholder="JaneDoe@gmail.com"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+            </div>
+            <!-- second part -->
+            <div class="first-form h-full w-[45%]">
+              <!-- name -->
+              <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Full Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  placeholder="Jane Doe"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+              <!-- email -->
+              <div class="email h-[75px] mb-[15px] w-full">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  placeholder="JaneDoe@gmail.com"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+            </div>
+            <!-- message -->
+             <div class="w-[60%] absolute bottom-[70px] flex gap-[15px] items-center">
+              <input type="checkbox" required>
+              <p>I agree to all the terms and conditions</p>
+             </div>
+            <button
+              type="submit"
+              class="submit-btn text-white bg-[#5ac44a] h-[50px] w-[150px] font-semibold hover:brightness-90 absolute bottom-[10px] left-0"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    
+                
+            
+
+    <script src="/build/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

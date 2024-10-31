@@ -1,60 +1,851 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Trust Scan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/build/css/style.css"
+    />
+  </head>
+  <body class="m-0 p-0 box-border">
+    <main class="w-full min-h-full">
+      <!-- header -->
+      <header
+        class="w-full h-[100px] bg-[#265b20] px-[20px] flex items-center justify-between fixed z-10"
+      >
+        <!-- logo -->
+        <div
+          class="logo h-[60px] w-[150px] rounded-[5px] grid place-content-center"
+        >
+          <h1 class="text-white text-[2rem] font-[600]">Trust Scan</h1>
+          <!-- <img
+            class="h-[60px] w-[60px]"
+            src="https://img.icons8.com/color/48/detective.png"
+            alt="detective"
+          /> -->
+        </div>
+        <!-- <img
+          src=""
+          alt=""
+          class="h-[50px] w-[50px] bg-black"
+        /> -->
+        <!-- navigation -->
+        <nav class="w-[45%] flex justify-between items-center h-[45px]">
+          <a
+            href="#"
+            class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
+            >Home</a
+          >
+          <a
+            href="#how-it-works"
+            class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
+            >How it works</a
+          >
+          <a
+            href="/build/signup.html"
+            class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
+            >Supplier</a
+          >
+          <a
+            href=""
+            class="h-full w-[90px] rounded-[10px] grid place-content-center bg-[#5ac44a] text-white text-[1.1rem] font-[500] no-underline hover:brightness-90"
+            >Admin</a
+          >
+          <a
+            data-modal-target="crypto-modal"
+            data-modal-toggle="crypto-modal"
+            href="#"
+            class="wallet-connect bg-white w-[150px] h-full rounded-[10px] text-[#265b20] text-[1.1rem] font-[500] no-underline grid place-content-center text-center hover:brightness-90"
+            >Connect Wallet</a
+          >
+        </nav>
+      </header>
+      <!-- body -->
+      <section
+        class="first-section w-full h-[100vh] bg-hero-pattern bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center px-[40px]"
+      >
+        <div class="h-[180px] w-[830px] flex flex-col text-center">
+          <h1 class="text-[3.4rem] text-white font-[500]">
+            Verify <span class="text-[#5ac44a]">Product Authenticity</span> with
+            Blockchain Technology
+          </h1>
+        </div>
+        <p class="text-white text-[1.2rem] font-[500] mb-[20px]">
+          Empowering manufacturers and users to ensure genuine products with
+          secure blockchain verification
+        </p>
+        <button
+          class="text-white bg-[#5ac44a] h-[50px] w-[150px] font-semibold hover:brightness-90 rounded-[15px]"
+        >
+          Trust Scan
+        </button>
+      </section>
+      <!-- second section -->
 
-<head>
-    <%- include("includes/head")%>
-    <title>Document</title>
-    <link rel="stylesheet" href="/index.css">
-</head>
-
-<body>
-    <%- include("includes/header") %>
-
-    <main>
-        <%- include("includes/sidebar") %>
-        <section id="section-1">
-            <h1>Add New Products </h1>
-            <form action="/addNew" method="POST" enctype="multipart/form-data">
-                <ul>
-                    <li>
-                        <label for="product-name">Product Name</label>
-                        <input type="text" name="product-name" id="product-name" placeholder="product name">
-                    </li>
-                    <li>
-                        <label for="product-category">Product Category</label>
-                        <input type="text" name="input" id="product-category" placeholder="product category">
-                    </li>
-                    <li>
-                        <label for="product-description">Product Description</label>
-                        <input type="text" name="input" id="product-description" placeholder="product description">
-                    </li>
-                    <li>
-                        <label for="company-name">Company Name</label>
-                        <input type="text" name="input" id="company-name" placeholder="company name">
-                    </li>
-                    <li>
-                        <label for="product-image">Upload Product Image</label>
-                        <input type="file" name="product-image" id="product-image" required accept="image/*">
-                    </li>
-                    <li>
-                        <label for="MFD">Manufacturing Date</label>
-                        <input type="text" name="input" id="MFD" placeholder="manufacturing date">
-                    </li>
-                    <li>
-                        <label for="nafdac-reg-number">Nafdac Reg Number</label>
-                        <input type="text" name="input" id="nafdac-reg-number" placeholder="nafdac-reg-number">
-                    </li>
-                    <li>
-                        <label for="expiry-date">Expiry Date</label>
-                        <input type="text" name="input" id="expiry-date" placeholder="expiry-date">
-                    </li>
-                </ul>
-                <input type="checkbox" id="ts&cs">
-                <label for="ts&cs"> i agree taht all the information i stated here is correct</label>
-                <button>Tokenize on Blockchain</button>
+      <section
+        class="features w-full h-[500px] bg-white flex flex-col items-center"
+      >
+        <h2 class="section-title text-[2rem] font-[600] my-[30px]">Features</h2>
+        <!-- features -->
+        <div
+          class="feature-display flex justify-around items-center w-full px-[50px]"
+        >
+          <!-- first div -->
+          <div class="w-[25%] group rounded-[20px] overflow-clip">
+            <div class="relative overflow-hidden">
+              <img
+                class="h-[350px] w-full object-cover overflow-hidden"
+                src="/build/img/ether.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full bg-black/40 flex items-center justify-center -top-10 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-300 overflow-hidden px-[10px]"
+              >
+                <p class="text-white text-[1.2rem] text-center">
+                  Built on the security of ethereum to ensure immutability, our
+                  platform boasts of a secure track record of all documented
+                  details of all registered products.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- second div -->
+          <div class="w-[25%] group rounded-[20px] overflow-clip">
+            <div class="relative overflow-hidden">
+              <img
+                class="h-[350px] w-full object-cover overflow-hidden"
+                src="/build/img/ether.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full bg-black/40 flex items-center justify-center -top-10 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-300 overflow-hidden px-[10px]"
+              >
+                <p class="text-white text-center text-[1.2rem]">
+                  Obtain Real-time, Legitimate Information about any product
+                  with just a scan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- third -->
+          <div class="w-[25%] group rounded-[20px] overflow-clip">
+            <div class="relative overflow-hidden">
+              <img
+                class="h-[350px] w-full object-cover overflow-hidden"
+                src="/build/img/ether.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full bg-black/40 flex items-center justify-center -top-10 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-300 overflow-hidden px-[10px]"
+              >
+                <p class="text-white text-center text-[1.2rem]">
+                  Transparency and Reliability is assured.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- third section -->
+      <section
+        id="how-it-works"
+        class="third-section h-[500px] w-full flex flex-col items-center scroll-margin-[200px]"
+      >
+        <h2 class="section-title text-[2rem] font-[600] my-[30px]">
+          How It Works
+        </h2>
+        <div
+          class="container w-full h-[400px] grid grid-cols-2 grid-rows-2 gap-[20px] border-2"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+      <section class="contact-us h-[700px] w-full flex flex-col items-center">
+        <h2 class="section-title text-[2rem] font-[600] my-[30px]">
+          Contact Us
+        </h2>
+        <p class="text-[#265b20] text-[1.2rem] font-[500] mb-[20px]">
+          Have questions or notice anything unusual, reach out to us.
+        </p>
+        <!-- papa div -->
+        <div class="form-container h-[600px] w-full flex px-[30px]">
+          <div
+            class="w-[70%] h-full bg-[#265b20] flex items-center justify-center"
+          >
+            <form
+              name="form"
+              onsubmit="return validateForm()"
+              class="form h-[480px] w-[70%] bg-white rounded-[30px] px-[40px] py-[20px] relative"
+            >
+              <!-- name -->
+              <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Full Name</label>
+                <input
+                  name="name"
+                  id="name"
+                  placeholder="Jane Doe"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+              <!-- email -->
+              <div class="email h-[75px] mb-[15px] w-full">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  placeholder="JaneDoe@gmail.com"
+                  type="text"
+                  required
+                  class="block h-[50px] border-gray-200 border-2 w-full text-[#265b20] focus:border-[#265b20]"
+                />
+              </div>
+              <!-- message -->
+              <div class="name h-[75px] mb-[15px] w-full">
+                <label for="name">Your Message</label>
+                <textarea
+                  placeholder="Your Message Here...."
+                  class="h-[150px] w-full border-2 border-gray-200 rounded-[5px] resize-none focus:border-[#265b20] p-[15px] text-[#265b20]"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="submit-btn text-white bg-[#5ac44a] h-[50px] w-[150px] font-semibold hover:brightness-90 absolute bottom-[30px] left-[30px]"
+              >
+                Submit
+              </button>
             </form>
-        </section>
-    </main>
-</body>
+          </div>
+          <div
+            class="w-[30%] h-full rounded-l-[40px] bg-[url(/build/img/contact.jpg)] bg-cover bg-center"
+          ></div>
+        </div>
+      </section>
+      <!-- <button type="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+<svg aria-hidden="true" class="w-4 h-4 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+Connect wallet
+</button> -->
 
+      <!-- wallet connect modal -->
+      <div
+        id="crypto-modal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <!-- Modal content -->
+          <div class="relative rounded-lg shadow bg-gray-700">
+            <!-- Modal header -->
+            <div
+              class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+            >
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Connect wallet
+              </h3>
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-toggle="crypto-modal"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+              <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                Connect with one of our available wallet providers or create a
+                new one.
+              </p>
+              <ul class="my-4 space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-4"
+                      viewBox="0 0 40 38"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z"
+                        fill="#E17726"
+                      />
+                      <path
+                        d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M32.1656 27.0093L39.7516 27.1537L37.1004 36.1603L27.8438 33.6116L32.1656 27.0093Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M7.83409 27.0093L12.1399 33.6116L2.89876 36.1604L0.263672 27.1537L7.83409 27.0093Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M17.5203 10.8677L17.8304 20.8807L8.55371 20.4587L11.1924 16.4778L11.2258 16.4394L17.5203 10.8677Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M22.3831 10.7559L28.7737 16.4397L28.8067 16.4778L31.4455 20.4586L22.1709 20.8806L22.3831 10.7559Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z"
+                        fill="#E27625"
+                      />
+                      <path
+                        d="M22.6523 30.6128L28.6066 33.4959L23.0679 36.1282L23.1255 34.3884L22.6523 30.6128Z"
+                        fill="#D5BFB2"
+                      />
+                      <path
+                        d="M17.3458 30.6143L16.8913 34.3601L16.9286 36.1263L11.377 33.4961L17.3458 30.6143Z"
+                        fill="#D5BFB2"
+                      />
+                      <path
+                        d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z"
+                        fill="#233447"
+                      />
+                      <path
+                        d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z"
+                        fill="#233447"
+                      />
+                      <path
+                        d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z"
+                        fill="#CC6228"
+                      />
+                      <path
+                        d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z"
+                        fill="#CC6228"
+                      />
+                      <path
+                        d="M31.5799 20.0605L27.6165 24.0998L24.5608 22.7034L23.0978 25.779L22.1387 20.4901L31.5799 20.0605Z"
+                        fill="#CC6228"
+                      />
+                      <path
+                        d="M8.41797 20.0605L17.8608 20.4902L16.9017 25.779L15.4384 22.7038L12.3988 24.0999L8.41797 20.0605Z"
+                        fill="#CC6228"
+                      />
+                      <path
+                        d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z"
+                        fill="#E27525"
+                      />
+                      <path
+                        d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z"
+                        fill="#E27525"
+                      />
+                      <path
+                        d="M17.6412 19.5088L17.8217 20.6447L18.2676 23.4745L17.9809 32.166L16.6254 25.1841L16.625 25.1119L17.6412 19.5088Z"
+                        fill="#E27525"
+                      />
+                      <path
+                        d="M22.3562 19.4932L23.3751 25.1119L23.3747 25.1841L22.0158 32.1835L21.962 30.4328L21.75 23.4231L22.3562 19.4932Z"
+                        fill="#E27525"
+                      />
+                      <path
+                        d="M27.7797 23.6011L27.628 27.5039L22.8977 31.1894L21.9414 30.5138L23.0133 24.9926L27.7797 23.6011Z"
+                        fill="#F5841F"
+                      />
+                      <path
+                        d="M12.2373 23.6011L16.9873 24.9926L18.0591 30.5137L17.1029 31.1893L12.3723 27.5035L12.2373 23.6011Z"
+                        fill="#F5841F"
+                      />
+                      <path
+                        d="M10.4717 32.6338L16.5236 35.5013L16.4979 34.2768L17.0043 33.8323H22.994L23.5187 34.2753L23.48 35.4989L29.4935 32.641L26.5673 35.0591L23.0289 37.4894H16.9558L13.4197 35.0492L10.4717 32.6338Z"
+                        fill="#C0AC9D"
+                      />
+                      <path
+                        d="M22.2191 30.231L23.0748 30.8354L23.5763 34.8361L22.8506 34.2234H17.1513L16.4395 34.8485L16.9244 30.8357L17.7804 30.231H22.2191Z"
+                        fill="#161616"
+                      />
+                      <path
+                        d="M37.9395 0.351562L39.9998 6.53242L38.7131 12.7819L39.6293 13.4887L38.3895 14.4346L39.3213 15.1542L38.0875 16.2779L38.8449 16.8264L36.8347 19.1742L28.5894 16.7735L28.5179 16.7352L22.5762 11.723L37.9395 0.351562Z"
+                        fill="#763E1A"
+                      />
+                      <path
+                        d="M2.06031 0.351562L17.4237 11.723L11.4819 16.7352L11.4105 16.7735L3.16512 19.1742L1.15488 16.8264L1.91176 16.2783L0.678517 15.1542L1.60852 14.4354L0.350209 13.4868L1.30098 12.7795L0 6.53265L2.06031 0.351562Z"
+                        fill="#763E1A"
+                      />
+                      <path
+                        d="M28.1861 16.2485L36.9226 18.7921L39.7609 27.5398L32.2728 27.5398L27.1133 27.6049L30.8655 20.2912L28.1861 16.2485Z"
+                        fill="#F5841F"
+                      />
+                      <path
+                        d="M11.8139 16.2485L9.13399 20.2912L12.8867 27.6049L7.72971 27.5398H0.254883L3.07728 18.7922L11.8139 16.2485Z"
+                        fill="#F5841F"
+                      />
+                      <path
+                        d="M25.5283 5.17383L23.0847 11.7736L22.5661 20.6894L22.3677 23.4839L22.352 30.6225H17.6471L17.6318 23.4973L17.4327 20.6869L16.9139 11.7736L14.4707 5.17383H25.5283Z"
+                        fill="#F5841F"
+                      />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">MetaMask</span>
+                    <span
+                      class="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400"
+                      >Popular</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5"
+                      viewBox="0 0 292 292"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M145.7 291.66C226.146 291.66 291.36 226.446 291.36 146C291.36 65.5541 226.146 0.339844 145.7 0.339844C65.2542 0.339844 0.0400391 65.5541 0.0400391 146C0.0400391 226.446 65.2542 291.66 145.7 291.66Z"
+                        fill="#3259A5"
+                      />
+                      <path
+                        d="M195.94 155.5C191.49 179.08 170.8 196.91 145.93 196.91C117.81 196.91 95.0204 174.12 95.0204 146C95.0204 117.88 117.81 95.0897 145.93 95.0897C170.8 95.0897 191.49 112.93 195.94 136.5H247.31C242.52 84.7197 198.96 44.1797 145.93 44.1797C89.6904 44.1797 44.1104 89.7697 44.1104 146C44.1104 202.24 89.7004 247.82 145.93 247.82C198.96 247.82 242.52 207.28 247.31 155.5H195.94Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap"
+                      >Coinbase Wallet</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      svg
+                      class="h-5"
+                      viewBox="0 0 75.591 75.591"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <linearGradient
+                        id="a"
+                        gradientTransform="matrix(0 -54.944 -54.944 0 23.62 79.474)"
+                        gradientUnits="userSpaceOnUse"
+                        x2="1"
+                      >
+                        <stop
+                          offset="0"
+                          stop-color="#ff1b2d"
+                        />
+                        <stop
+                          offset=".3"
+                          stop-color="#ff1b2d"
+                        />
+                        <stop
+                          offset=".614"
+                          stop-color="#ff1b2d"
+                        />
+                        <stop
+                          offset="1"
+                          stop-color="#a70014"
+                        />
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        gradientTransform="matrix(0 -48.595 -48.595 0 37.854 76.235)"
+                        gradientUnits="userSpaceOnUse"
+                        x2="1"
+                      >
+                        <stop
+                          offset="0"
+                          stop-color="#9c0000"
+                        />
+                        <stop
+                          offset=".7"
+                          stop-color="#ff4b4b"
+                        />
+                        <stop
+                          offset="1"
+                          stop-color="#ff4b4b"
+                        />
+                      </linearGradient>
+                      <g transform="matrix(1.3333 0 0 -1.3333 0 107.2)">
+                        <path
+                          d="m28.346 80.398c-15.655 0-28.346-12.691-28.346-28.346 0-15.202 11.968-27.609 26.996-28.313.44848-.02115.89766-.03314 1.3504-.03314 7.2574 0 13.876 2.7289 18.891 7.2137-3.3227-2.2036-7.2074-3.4715-11.359-3.4715-6.7504 0-12.796 3.3488-16.862 8.6297-3.1344 3.6999-5.1645 9.1691-5.3028 15.307v1.3349c.13821 6.1377 2.1683 11.608 5.302 15.307 4.0666 5.2809 10.112 8.6297 16.862 8.6297 4.1526 0 8.038-1.2679 11.361-3.4729-4.9904 4.4643-11.569 7.1876-18.786 7.2144-.03596 0-.07122.0014-.10718.0014z"
+                          fill="url(#a)"
+                        />
+                        <path
+                          d="m19.016 68.025c2.6013 3.0709 5.9607 4.9227 9.631 4.9227 8.2524 0 14.941-9.356 14.941-20.897s-6.6891-20.897-14.941-20.897c-3.6703 0-7.0297 1.851-9.6303 4.922 4.0659-5.2809 10.111-8.6297 16.862-8.6297 4.1519 0 8.0366 1.2679 11.359 3.4715 5.802 5.1906 9.4554 12.735 9.4554 21.133 0 8.397-3.6527 15.941-9.4533 21.131-3.3234 2.205-7.2088 3.4729-11.361 3.4729-6.7504 0-12.796-3.3488-16.862-8.6297"
+                          fill="url(#b)"
+                        />
+                      </g>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap"
+                      >Opera Wallet</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-5"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <radialGradient
+                          cx="0%"
+                          cy="50%"
+                          fx="0%"
+                          fy="50%"
+                          r="100%"
+                          id="radialGradient-1"
+                        >
+                          <stop
+                            stop-color="#5D9DF6"
+                            offset="0%"
+                          ></stop>
+                          <stop
+                            stop-color="#006FFF"
+                            offset="100%"
+                          ></stop>
+                        </radialGradient>
+                      </defs>
+                      <g
+                        id="Page-1"
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g id="logo">
+                          <rect
+                            id="base"
+                            fill="url(#radialGradient-1)"
+                            x="0"
+                            y="0"
+                            width="512"
+                            height="512"
+                            rx="256"
+                          ></rect>
+                          <path
+                            d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z"
+                            id="WalletConnect"
+                            fill="#FFFFFF"
+                            fill-rule="nonzero"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap"
+                      >WalletConnect</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="h-4"
+                      viewBox="0 0 96 96"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M72.0998 0.600098H48.3998H24.5998H0.799805V24.4001V48.2001V49.7001V71.8001V71.9001V95.5001H24.5998V72.0001V71.9001V49.8001V48.3001V24.5001H48.3998H72.1998H95.9998V0.700104H72.0998V0.600098Z"
+                        fill="#617BFF"
+                      />
+                      <path
+                        d="M48.5 71.8002H72.1V95.6002H73C79.1 95.6002 84.9 93.2002 89.2 88.9002C93.5 84.6002 95.9 78.8002 95.9 72.7002V48.2002H48.5V71.8002Z"
+                        fill="#617BFF"
+                      />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Fortmatic</span>
+                  </a>
+                </li>
+              </ul>
+              <div>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
+                >
+                  <svg
+                    class="w-3 h-3 me-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                  Why do I need to connect with my wallet?</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#265b20] mt-[20px]">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a
+              href="https://flowbite.com/"
+              class="flex items-center"
+            >
+              <!-- <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                class="h-8 me-3"
+                alt="FlowBite Logo"
+              /> -->
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+                >Trust Scan</span
+              >
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+                Resources
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://flowbite.com/"
+                    class="hover:underline"
+                    >Trust Scan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://tailwindcss.com/"
+                    class="hover:underline"
+                    >Tailwind CSS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+                Follow us
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://github.com/themesberg/flowbite"
+                    class="hover:underline"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://discord.gg/4eeurUVvTy"
+                    class="hover:underline"
+                    >Discord</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Legal
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a
+                    href="#"
+                    class="hover:underline"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-white sm:text-center"
+            >© 2023
+            <a
+              href="https://flowbite.com/"
+              class="hover:underline"
+              >Flowbite™</a
+            >. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              class="text-white hover:text-gray-900"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:brightness-90 ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:brightness-90 ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:brightness-90 ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-brightness-90 ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/build/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
 </html>

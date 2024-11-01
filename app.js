@@ -7,6 +7,7 @@ const path = require('path');
 
 const express = require('express');
 
+
 // const db = require('./data/database');
 // const demoRoutes = require('./routes/demo');
 
@@ -69,7 +70,10 @@ app.get("/signup", function(req, res){
   res.render("signupks")
 })
 
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("server is running on port ${PORT}")
+})
 
 // db.connectToDatabase().then(function () {
   

@@ -67,7 +67,7 @@ app.get("/overviews", function(req, res){
 })
 
 app.get("/signup", function(req, res){
-  res.render("signupks")
+  res.render("signup")
 })
 
 const PORT = process.env.PORT || 3000;

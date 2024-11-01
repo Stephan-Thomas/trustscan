@@ -29,7 +29,7 @@
     />
     <link
       rel="stylesheet"
-      href="/build/css/style.css"
+      href="/style.css"
     />
   </head>
   <body class="m-0 p-0 box-border">
@@ -57,7 +57,7 @@
         <!-- navigation -->
         <nav class="w-[45%] flex justify-between items-center h-[45px]">
           <a
-            href="#"
+            href="/"
             class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
             >Home</a
           >
@@ -67,7 +67,7 @@
             >How it works</a
           >
           <a
-            href="/build/signup.html"
+            href="/signup"
             class="bg-transparent text-white text-[1.1rem] font-[500] no-underline"
             >Supplier</a
           >
@@ -120,7 +120,7 @@
             <div class="relative overflow-hidden">
               <img
                 class="h-[350px] w-full object-cover overflow-hidden"
-                src="/build/img/ether.png"
+                src="/public/ether.png"
                 alt=""
               />
               <div
@@ -139,7 +139,7 @@
             <div class="relative overflow-hidden">
               <img
                 class="h-[350px] w-full object-cover overflow-hidden"
-                src="/build/img/ether.png"
+                src="/public/ether.png"
                 alt=""
               />
               <div
@@ -157,7 +157,7 @@
             <div class="relative overflow-hidden">
               <img
                 class="h-[350px] w-full object-cover overflow-hidden"
-                src="/build/img/ether.png"
+                src="/public/ether.png"
                 alt=""
               />
               <div
@@ -182,10 +182,33 @@
         <div
           class="container w-full h-[400px] grid grid-cols-2 grid-rows-2 gap-[20px] border-2"
         >
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <p>visit the verification page <br>
+            on the website: go to the main website and select the "verify a product" option from the navigation bar. <br>
+          in the MObile app: open the app, and go the "verify product" section on the main screen
+        </p>
+          </div>
+          <div>
+            <p>
+              verify with qr code <br>
+              step 1: click on "scan with qr code"
+              step 2: grant camera access if prompted
+              step 3: position the qr code within the camera's view. The app/website will automatically detect and scan the code. <br>
+              step 4: after scanning, the system will connect to the blockchain and check the token associated with the product.
+            </p>
+          </div>
+          <div>
+            <p>
+              view the verification results <br>
+              the system will fetch details from the blockchain to verify if the product is genuine. <br>
+              if the product is Genuine: <br>
+              you'll see a "verified" badge with a green checkmark. <br>
+              product details such as the product name, image, manufacturing date, nafdac reg number, <br>
+              and other relevant information will display. <br>
+              if the product is not found or counterfiet:
+              a warning message in red will appear, indicating, "this product may be counterfeit or unregistered". 
+            </p>
+          </div>
         </div>
       </section>
       <section class="contact-us h-[700px] w-full flex flex-col items-center">
@@ -845,7 +868,7 @@ Connect wallet
       </div>
     </footer>
 
-    <script src="/build/script.js"></script>
+    <script src="/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>

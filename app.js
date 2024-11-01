@@ -65,6 +65,9 @@ app.get("/overviews", function(req, res){
   res.render("overview")
 })
 
+app.get("/signup", function(req, res){
+  res.render("signupks")
+})
 
 app.listen(3000);
 

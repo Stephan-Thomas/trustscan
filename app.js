@@ -13,6 +13,7 @@ const express = require('express');
 
 const app = express();
 
+
 app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
@@ -20,6 +21,15 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use(express.urlencoded({ extended: false }));
+
+app.use((req, res, next) => {
+  if (req.path.endsWith(".css")){
+    res.setHeader("Content-Type", "text/css");
+  } else if (req.path.endsWith(".js")) {
+    res.setHeader("Content-Type", "application/javascript");
+  }
+  next();
+})
 
 
 
